@@ -35,7 +35,7 @@ export default function App() {
         {isPending && <h3>LOADING...</h3>}
         {showEditor && <MDEditor />}
         {isLoadingUser && <h2>Carregando usuário</h2>}
-        <UserComponent {...user} />
+        {Object.keys(user).length > 0 && <UserComponent {...user} />}
       </div>
     </div>
   );
